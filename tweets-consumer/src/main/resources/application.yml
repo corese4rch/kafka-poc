@@ -1,0 +1,12 @@
+kafka:
+  bootstrap:
+    servers: localhost:9092
+
+twitter:
+  consumer:
+    key: CONSUMER_KEY
+    secret: CONSUMER_SECRET
+  access:
+    token: ACCESS_TOKEN
+    secret: ACCESS_SECRET
+  terms: java,kotlin
