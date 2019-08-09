@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: kafka.poc
+---
+testFramework: junit
+sourceLanguage: java
