@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "tweets-consumer"
+    metrics_path: "/prometheus"
+    static_configs:
+      - targets: ["tweets-consumer:8080"]
+  - job_name: "tweets-filtering"
+    metrics_path: "/prometheus"
+    static_configs:
+      - targets: ["tweets-filtering:8080"]
+  - job_name: "filtered-tweets-consumer"
+    metrics_path: "/prometheus"
+    static_configs:
+      - targets: ["filtered-tweets-consumer:8080"]
+  - job_name: "kafka"
+    static_configs:
+      - targets: ["kafka:7072"]
+
+

@@ -21,7 +21,8 @@ To run this example on your machine you have to:
     ```
 4. Run docker compose.
     ```
-    docker-compose -f docker/docker-compose.yml up
+    docker-compose -f infrastructure/docker-compose.yml up
     ```
 If everything is fine you should be able to access filtered tweets by executing HTTP 
-request GET localhost:8080/tweets   
+request GET localhost:8080/tweets. Also you can see metrics for the services by accessing 
+grafana on localhost:3000 - username: 'username', password: 'password'. 

@@ -3,6 +3,7 @@ package com.tweets.filtering;
 import io.micronaut.context.annotation.Property;
 import io.micronaut.context.event.ApplicationEventListener;
 import io.micronaut.context.event.StartupEvent;
+import io.micronaut.scheduling.annotation.Async;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.Topology;
 
@@ -22,6 +23,7 @@ public class StreamsRunner implements ApplicationEventListener<StartupEvent> {
     }
 
     @Override
+    @Async
     public void onApplicationEvent(StartupEvent event) {
         KafkaStreams kafkaStreams = new KafkaStreams(topology, kafkaStreamsProperties);
         Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));
