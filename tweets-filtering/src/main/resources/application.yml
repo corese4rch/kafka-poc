@@ -4,3 +4,15 @@ kafka:
     application.id: tweets-filtering
     default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
     default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+
+endpoints:
+  prometheus:
+    sensitive: false
+micronaut:
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+        descriptions: true

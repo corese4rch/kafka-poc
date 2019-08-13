@@ -1,0 +1,12 @@
+apiVersion: 1
+
+providers:
+  - name: 'Kafka overview'
+    type: file
+    options:
+      path: /etc/grafana/provisioning/dashboards/kafka
+
+  - name: 'Micrometer(JVM)'
+    type: file
+    options:
+      path: /etc/grafana/provisioning/dashboards/micrometer

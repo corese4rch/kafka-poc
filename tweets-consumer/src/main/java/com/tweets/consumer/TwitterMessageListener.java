@@ -2,6 +2,7 @@ package com.tweets.consumer;
 
 import io.micronaut.context.event.ApplicationEventListener;
 import io.micronaut.context.event.StartupEvent;
+import io.micronaut.scheduling.annotation.Async;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,6 +39,7 @@ public class TwitterMessageListener implements ApplicationEventListener<StartupE
     }
 
     @Override
+    @Async
     public void onApplicationEvent(StartupEvent event) {
         listenToTwitterMessages();
     }

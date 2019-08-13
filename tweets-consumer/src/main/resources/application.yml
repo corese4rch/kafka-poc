@@ -10,3 +10,16 @@ twitter:
     token: ACCESS_TOKEN
     secret: ACCESS_SECRET
   terms: java,kotlin
+
+endpoints:
+  prometheus:
+    sensitive: false
+micronaut:
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+        descriptions: true
+

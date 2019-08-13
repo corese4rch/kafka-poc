@@ -1,3 +1,15 @@
 kafka:
   bootstrap:
     servers: localhost:9092
+
+endpoints:
+  prometheus:
+    sensitive: false
+micronaut:
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+        descriptions: true
